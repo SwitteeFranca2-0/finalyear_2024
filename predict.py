@@ -5,7 +5,7 @@ import pandas as pd
 import re
 
 
-filename = 'xgboost.pkl'
+filename = 'xgboost_model.pkl'
 
 try:
     with open(filename, 'rb') as f:
@@ -18,13 +18,13 @@ print('passed')
 def extract_features(url):
     """EXtract necassary features"""
     features = {}
-    features['UsingIP'] = 1 if re.match(r"\b(?:[0-9]{1, 3}\.){3}[0-9]{1, 3\b}", url) else 0
+    features['UsingIP'] = 1 if re.match(r"\b(?:[0-9]{1, 3}\.){3}[0-9]{1, 3}\b", url) else 0
 
     features['LongURL'] = 1 if len(url) > 75 else 0
 
     features['Symbol@'] =  1 if '@' in url else 0
 
-    features['Redirecting//'] = 1 if '@' in url else 0
+    features['Redirecting//'] = 1 if '//' in url else 0
 
     features['PrefixSuffix-'] = 1 if '-' in url else 0
 
@@ -46,4 +46,4 @@ def predict(url_features):
     return prediction_result
 
 
-print(predict(extract_features('www.bodijahmarket.com')))
+print(predict(extract_features('https://www.bodijahmarket.com')))

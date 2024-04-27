@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phisher</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/background.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+   
 </head>
 <body>
-    <div id="large-header" class="large-header">
-        <canvas id="demo-canvas"></canvas>
-          <h1 class="main-title">Connect <span class="thin">Three</span></h1>
+   <div id="container">
+    <div id="logo">
+
     </div>
-    <script src="{{ url_for('static', filename='js/background.js') }}"></script>
+    <div id="phisher">
+        <div id="random">
+            Is the website phishing? Let's find out
+        </div>
+        <p> Input URL </p>
+        <input type="text" name="url_box" placeholder="">
+        <button onclick="">Check</button>
+        <div id="result">
+            <p id="result_p"></p>
+            <button id="result_btn" onclick="">OK</button>
+        </div>
+
+   </div>
+   <div id="guide">
+    <div>
+        <span>Close</span>
+    </div>
+    <div id="guide_textsl">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+    
+   </div>
+</div>
+<script src="{{ url_for('static', filename='js/background.js') }}"></script>
+   
 </body>
 </html>
