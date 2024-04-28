@@ -46,4 +46,17 @@ def predict(url_features):
     return prediction_result
 
 
+
+def predict_phish(url):
+    """Predict the legitimacy of the URL"""
+    try:
+        with open(filename, 'rb') as f:
+            model = pickle.load(f)
+    except Exception as e:
+        print("Error loading the model:", e)
+    url_features = extract_features(url)
+    result = predict(url_features)
+    return result
+
+    
 print(predict(extract_features('https://www.bodijahmarket.com')))

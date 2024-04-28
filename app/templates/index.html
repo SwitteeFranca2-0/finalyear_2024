@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phisher</title>
+    <title>Safe Search: AI Driven Phishing Links Detection</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/background.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,35 +11,65 @@
    
 </head>
 <body>
-   <div id="container">
-    <div id="logo">
-
-    </div>
-    <div id="phisher">
-        <div id="random">
-            Is the website phishing? Let's find out
+   
+    <div id="full">
+        <div id="logo">
+            <img src="{{ url_for('static', filename='image/Phisher.png') }}">
         </div>
-        <p> Input URL </p>
-        <input type="text" name="url_box" placeholder="">
-        <button onclick="">Check</button>
-        <div id="result">
-            <p id="result_p"></p>
-            <button id="result_btn" onclick="">OK</button>
+        <div id="container">  
+            <div id="phisher">
+                <div id="random">
+                    Is the website phishing? Let's find out
+                </div>
+                <h3> Input URL </h3>
+                <input type="text" name="url_box" placeholder="" id="input">
+                <div id="result">
+                    <p id="result_p"></p>
+                    <button id="result_btn" onclick="">OK</button>
+                </div>
+                <button id="check">Check</button>
+        
+                </div>
+            <div id="guide">
+                <div id="guide_texts">
+                    <div class="awareness-block">
+                        <h3>Check URL Carefully</h3>
+                        <p>Always verify the URL before entering any personal information. Phishing websites often have misspelled or suspicious URLs.</p>
+                    </div>
+                    <div class="awareness-block">
+                        <h3>Use Security Software</h3>
+                        <p>Install and keep security software up to date on all your devices. It can help detect and block phishing attempts.</p>
+                    </div>
+                    <div class="awareness-block">
+                        <h3>Be Wary of Emails</h3>
+                        <p>Avoid clicking on links or downloading attachments from unknown or suspicious emails. They could be phishing attempts.</p>
+                    </div>
+                </div>
+                <div id="close">
+                    Close
+                </div> 
+            </div>
+        
+            <div id="guide_home">
+                <div id="guide_texts_home">
+                    <div class="awareness-block">
+                        <h3>Check URL Carefully</h3>
+                        <p>Always verify the URL before entering any personal information. Phishing websites often have misspelled or suspicious URLs.</p>
+                    </div>
+                    <div class="awareness-block">
+                        <h3>Use Security Software</h3>
+                        <p>Install and keep security software up to date on all your devices. It can help detect and block phishing attempts.</p>
+                    </div>
+                    <div class="awareness-block">
+                        <h3>Be Wary of Emails</h3>
+                        <p>Avoid clicking on links or downloading attachments from unknown or suspicious emails. They could be phishing attempts.</p>
+                    </div>
+                </div>
+            </div>
+        
+        
         </div>
-
-   </div>
-   <div id="guide">
-    <div>
-        <span>Close</span>
     </div>
-    <div id="guide_textsl">
-        <p></p>
-        <p></p>
-        <p></p>
-    </div>
-    
-   </div>
-</div>
 <script src="{{ url_for('static', filename='js/background.js') }}"></script>
    
 </body>
