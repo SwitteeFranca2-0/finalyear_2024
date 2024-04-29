@@ -1,5 +1,3 @@
-let close_btn = document.querySelector('#close')
-let guide_box = document.querySelector('#guide')
 let phisher = document.querySelector('#phisher')
 let check_btn = document.querySelector('#check')
 let input = document.querySelector('#input')
@@ -7,16 +5,6 @@ let result_box = document.querySelector('#result_p')
 let result_boxed = document.querySelector('#result')
 
 
-
-
-
-
-if (close_btn !== null && guide_box !== null) {
-    close_btn.addEventListener('click', ()=>{
-        guide_box.style.display = 'none';
-        phisher.style.display = 'flex';
-    })
-}
 
 
 if (check_btn !== null) {

@@ -5,17 +5,24 @@
 
 }
 
-body {
+body{
 	background-image: url("../image/background.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100vh;
 }
 
 #full{	
+	min-height: 100vh;
+	max-height: fit-content;
 	margin: auto;
+	display: flex;
+	flex-direction: column;
+	
+
 }
+
 #container {
+	
 	width: 1500px;
 	margin: auto;
 	display: flex;
@@ -23,6 +30,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
+	height: fit-content;
 }
 
 
@@ -50,57 +58,6 @@ body {
 	display: none;
 }
 
-#guide{
-	display: none;
-	color: black;
-	flex-direction: column;
-	z-index: 999;
-	background-color: rgb(252, 251, 251);;
-	width: 450px;
-	height: 600px;
-	justify-content: center;
-	align-items: center;
-	padding: 60px 20px;
-	font-family: "Roboto Mono";
-	justify-content: space-between;
-}
-
-
-#guide #guide_texts{
-	width: 90%;
-	height: 450px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-#guide .awareness-block{
-	font-size: 14px;
-	text-align: center;
-	width: 100%;
-	height: 25%;
-	padding: 5px;
-	background-color: rgb(242, 245, 248);
-	color: black;
-	margin-bottom: 20px;
-	box-shadow: 2px 3px 16px 7px rgba(114, 108, 108, 0.75);
-}
-
-
-#guide .awareness-block h3{
-	margin-bottom: 3px;
-}
-
-#close{
-	text-align: right;
-	cursor:default;
-	font-size: 15px;
-}
-
-#close:hover{
-	color: rgb(55, 57, 59);
-	font-size: 17px;
-}
 #phisher input{
 	width: 100%;
 	margin: 20px 0px 10px 0px;
@@ -139,7 +96,8 @@ body {
 
 #result_p{
 	width: 100%;
-	height: 30px;
+	min-height: 30px;
+	max-height: fit-content;
 	background-color: black;
 	box-shadow: 2px 4px 20px 3px rgba(23, 25, 27, 0.9) inset;
 	padding: 2px 5px;
@@ -196,6 +154,16 @@ body {
 	
 }
 
+footer{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	align-content: center;
+	background-color: rgba(41, 38, 38, 0.5);
+	margin-top: auto;
+	color: white;
+}
+
 @media screen and (max-width: 1499px) {
 	#phisher{
 		width: 600px;
@@ -210,9 +178,6 @@ body {
 
 
 @media screen and (max-width: 700px) {
-	body{
-		height: fit-content;
-	}
 	#container{
 		width: 100%;
 		margin: auto;
