@@ -184,7 +184,7 @@ footer{
 		overflow: hidden;
 	}
 	#phisher{
-		width: 450px;
+		width: 95%;
 	}
 
 	#guide_home{
@@ -197,13 +197,13 @@ footer{
 	}
 
 	#guide_texts_home div{
-		width: 450px;
+		width: 95%;
 		height: 150px;
 		
 	}
 
 	#logo img{
-		width: 120px;
-		height: 120px;
+		width: 100px;
+		height: 100px;
 	}
 } 
