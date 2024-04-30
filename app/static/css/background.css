@@ -22,7 +22,7 @@ body{
 }
 
 #container {
-	width: 1500px;
+	width: 100vw;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -118,8 +118,7 @@ body{
 }
 
 #guide_home{
-	width: 1300px;
-	
+	width: 100vw;
 	/* background-color: rgba(3, 3, 3, 0.5); */
 	color: white;
 	font-family: 'Roboto Mono';
@@ -169,7 +168,7 @@ footer{
 		width: 600px;
 	}
 	#guide_home{
-		width: 1200px
+		width: 100vw;
 	}
 	#guide_texts_home div{
 		padding: 10px;
@@ -178,14 +177,18 @@ footer{
 
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 	#container{
-		width: 100vw;
+		width: 100%;
 		margin: auto;
 		overflow: hidden;
 	}
 	#phisher{
 		width: 450px;
+	}
+
+	#guide_home{
+		width: 100vw;
 	}
 	#guide_texts_home{
 		flex-direction: column;
