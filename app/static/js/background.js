@@ -3,6 +3,9 @@ let check_btn = document.querySelector('#check')
 let input = document.querySelector('#input')
 let result_box = document.querySelector('#result_p')
 let result_boxed = document.querySelector('#result')
+let sliders = document.querySelectorAll('.slider')
+let slider_box = document.querySelector('#slider_outer')
+
 
 
 
@@ -62,3 +65,46 @@ input.addEventListener('click', ()=>{
     result_box.textContent = '';
     result_boxed.style.display = 'none'
 })
+
+
+// window.addEventListener('resize', ()=>{
+//     if (window.innerWidth >= 800){
+//         if (sliders.length !== 0 && slider_box !== null){
+//            sliders.forEach(slider =>{
+//                slider.style.display = 'None';
+//            })
+//         }
+//        }
+    
+//     if (window.innerWidth <= 800){
+//     if (sliders.length !== 0 && slider_box !== null){
+//         sliders.forEach(slider =>{
+//             slider.style.display = 'block';
+//         })
+//     }
+//     }
+// })
+
+// if (window.innerWidth >= 800){
+//  if (sliders.length !== 0 && slider_box !== null){
+//     sliders.forEach(slider =>{
+//         slider.style.display = 'None';
+//     })
+//  }
+// }
+
+
+
+addAnimation = ()=>{
+    slider_box.setAttribute('data-animated', true)
+}
+
+if (window.innerWidth >= 800){
+    if (sliders.length > 0 && slider_box !== null){
+      console.log('okay')
+      if (!window.matchMedia("(prefers-reduced-motion: reduce").matches){
+        addAnimation();
+      }
+    }
+}
+

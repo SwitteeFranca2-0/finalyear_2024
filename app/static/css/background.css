@@ -130,18 +130,22 @@ body{
 	justify-content: space-between;
 	flex-direction: row;
 	height: 130px;
+	/* border: 1px solid orange; */
+	margin: auto;
 }
 
 
-#guide_texts_home div{
-	width: 30%;
+#guide_texts_home .awareness-block{
 	font-size: 13px;
 	text-align: center;
+	text-wrap: wrap;
 	padding: 15px;
 	background-color: rgba(3, 3, 3, 0.5);
 	box-shadow: 2px 3px 16px 7px rgba(45, 57, 80, 0.9) inset;
 	align-content: center;
 }
+
+
 #guide_texts_home div:hover{
 	font-size: 15px;
 }
@@ -163,6 +167,51 @@ footer{
 	font-family: 'Roboto Mono'
 }
 
+
+@media screen and (min-width: 801px){
+	#guide_texts_home .awareness-block{
+		min-width: 50%;
+		max-width: 230px;
+	}
+	.slider-block{
+		gap: 1rem;
+		/* flex-wrap: wrap; */
+		
+	}
+	
+	#slider_outer{
+		width: 70%;
+		margin: auto;
+		/* overflow: hidden; */
+	}
+	#slider_outer[data-animated=true]{
+		overflow: hidden;
+		mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+		-webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+	}
+
+	#slider_outer[data-animated=true] .slider-block{
+		width: max-content;
+		flex-wrap: nowrap;
+		animation: scroll 15s linear infinite;
+	}
+
+	@keyframes scroll{
+		0% {
+			transform: translate(0%)
+		}
+		50% {
+			transform: translate(-50%);
+		}
+		100% {
+			transform: translate(-100%);
+		}
+	}
+
+	#guide_texts_home div{
+	
+	}
+}
 @media screen and (max-width: 1499px) {
 	#phisher{
 		width: 600px;
@@ -172,12 +221,15 @@ footer{
 	}
 	#guide_texts_home div{
 		padding: 10px;
+		width: fit-content;
+		/* border: 1px solid orange; */
 	}
 }
 
 
 
 @media screen and (max-width: 800px) {
+
 	#container{
 		width: 100%;
 		margin: auto;
@@ -191,15 +243,15 @@ footer{
 		width: 100vw;
 	}
 	#guide_texts_home{
+		width: 100%;
 		flex-direction: column;
 		align-items: center;
 		height: 500px;
 	}
 
-	#guide_texts_home div{
-		width: 95%;
+	#guide_texts_home .awareness-block{
+		width: 95% !important;
 		height: 150px;
-		
 	}
 
 	#logo img{
