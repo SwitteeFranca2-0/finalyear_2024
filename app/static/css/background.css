@@ -247,6 +247,7 @@ footer{
 		flex-direction: column;
 		align-items: center;
 		height: 500px;
+		margin-bottom: 20px;
 	}
 
 	#guide_texts_home .awareness-block{
