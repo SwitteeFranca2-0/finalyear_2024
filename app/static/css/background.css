@@ -168,7 +168,7 @@ footer{
 }
 
 
-@media screen and (min-width: 100px){
+@media screen and (min-width: 801px){
 	#guide_texts_home .awareness-block{
 		min-width: 50%;
 		max-width: 230px;
@@ -239,28 +239,23 @@ footer{
 		width: 95%;
 	}
 
-	/* #guide_home{
+	#guide_home{
 		width: 100vw;
-	}*/
+	}
 	#guide_texts_home{
-		/* width: 100%;
+		width: 100%;
 		flex-direction: column;
-		align-items: center; */
-		height: 200px;
+		align-items: center;
+		height: 500px;
 	}
 
 	#guide_texts_home .awareness-block{
-		width: 150px;;
+		width: 95% !important;
 		height: 150px;
 	}
 
 	#logo img{
 		width: 100px;
 		height: 100px;
-	}
-	#slider_outer{
-		width: 90%;
-		margin: auto;
-		/* overflow: hidden; */
 	}
 } 
