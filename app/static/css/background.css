@@ -222,13 +222,12 @@ footer{
 	#guide_texts_home div{
 		padding: 10px;
 		width: fit-content;
-		/* border: 1px solid orange; */
 	}
 }
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px){
 
 	#container{
 		width: 100%;
@@ -237,26 +236,71 @@ footer{
 	}
 	#phisher{
 		width: 95%;
-	}
-
-	#guide_home{
-		width: 100vw;
-	}
-	#guide_texts_home{
-		width: 100%;
-		flex-direction: column;
-		align-items: center;
-		height: 500px;
-		margin-bottom: 20px;
-	}
+	} 
 
 	#guide_texts_home .awareness-block{
-		width: 95% !important;
-		height: 150px;
+		width: 300px;
+		text-wrap: wrap;
+		height: 180px;
+	}
+	.slider-block{
+		gap: 1rem;
+		/* flex-wrap: wrap; */
+	}
+	
+	#slider_outer{
+		width: 90%;
+		margin: auto; 
+	}
+	#slider_outer{
+		overflow: hidden;
+		mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+		-webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
 	}
 
+	#slider_outer .slider-block{
+		width: max-content;
+		flex-wrap: nowrap;
+		animation: scroll 15s linear infinite;
+		height: fit-content;
+	}
+
+	@keyframes scroll{
+		0% {
+			transform: translate(0%)
+		}
+		100% {
+			transform: translate(-65%);
+		}
+	}
 	#logo img{
 		width: 100px;
 		height: 100px;
 	}
+	
+}
+
+@media screen and (max-width: 800px) {
+
+	
+	/* #guide_home{
+		width: 100vw;
+	}
+	
+	#guide_texts_home{
+		width: max-content;
+		width: 100%;
+		flex-direction: column;
+		align-items: center; 
+		height: fit-content;
+		animation: scroll 15s linear infinite; 
+
+	}  */
+
+	/* #guide_texts_home .awaregness-block{
+		width: 95% !important;
+		height: 150px;
+	}  */
+
+	
 } 
