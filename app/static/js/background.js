@@ -44,10 +44,10 @@ if (check_btn !== null) {
             result_boxed.style.display = 'flex'
             let extra_text = 'is safe to visit'
             if (result['result'] == 'Legitimate'){
-                result_box.style.color = 'green'
+                result_box.style.color = '#3cd73c'
             }
             else{
-                result_box.style.color = 'red'
+                result_box.style.color = '#ff1515'
                 extra_text = ' is not safe. Do not Visit'
             }
             result_box.textContent = result['result'] + '; '+ ' ' + url + ' ' +extra_text
